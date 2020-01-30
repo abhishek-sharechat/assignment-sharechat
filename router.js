@@ -3,14 +3,14 @@ let router = require('express').Router();
 
 // router.get('/', (req, res) => res.send('Hello World!'));
 
-router.get('/getDataByName/:name', apiController.handleRequest);
+router.get('/users/:name', apiController.handleRequest);
 
-router.post('/postData', apiController.handlePostRequest);
+router.post('/users', apiController.handlePostRequest);
 
-router.put('/updateData', apiController.handleUpdateRequest);
+router.put('/users', apiController.handleUpdateRequest);
 
-router.get('/getAllData', apiController.handleAllDataRequest);
+router.get('/users', apiController.handleAllDataRequest);
 
-router.delete('/deleteData', apiController.handleDeleteRequest);
+router.delete('/users', apiController.handleDeleteRequest);
 
 module.exports = router;

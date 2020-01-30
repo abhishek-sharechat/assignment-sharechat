@@ -51,10 +51,7 @@ function handleAllDataRequest(req, res) {
 }
 
 function handleDeleteRequest(req, res) {
-    console.log(req.body.filter);
-    const filter = req.body.filter;
-    const data = req.body.data;
-    db.deleteData(filter, data).then(function (data) {
+    db.deleteData(req.body).then(function (data) {
         res.send(data);
         return res;
     }).catch(function (err) {
